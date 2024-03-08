@@ -9,6 +9,7 @@ public class Hello{
 	    	
 	    	String str1 = str.replaceAll("-", "").substring(2);
 			System.out.println("안녕하세요!");
+			System.out.println("안녕하세요!");
 	    	System.out.println(str1);
 	    }
 
