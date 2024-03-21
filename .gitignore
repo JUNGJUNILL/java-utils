@@ -31,6 +31,9 @@ replay_pid
 .metadata
 .settings/
 
+# Compiled class file
+*.class
+
 # End of httpswww.toptal.comdevelopersgitignoreapijava
 
 bin/
