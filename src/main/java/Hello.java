@@ -1,5 +1,3 @@
-import java.util.List;
-
 public class Hello{
 	
 
@@ -13,6 +11,7 @@ public class Hello{
 			System.out.println("사랑합니다");
 	    	System.out.println(str1);
 			System.out.println("안녕하세요@");
+			System.out.println("또시엘라");
 	    }
 
 }	
