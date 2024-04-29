@@ -26,7 +26,7 @@ public class P003_Logic {
             if(checkLen < hangulLen){
                 System.out.println("한글은 "+checkLen+"자 입력 할 수 없습니다.");
 
-            }else if(maxByte <  ((hangulLen*3) + nonHangulLen)) {
+            }else if(maxByte <  ((hangulLen*hangulPerByte) + nonHangulLen)) {
                 System.out.println("입력 가능한 바이트수를 초과하였습니다.");
             }else{
                 System.out.println("완료!");
