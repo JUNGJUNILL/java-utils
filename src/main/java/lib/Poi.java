@@ -17,29 +17,29 @@ public class Poi {
     public static String fileNm = "poi_making_file_test"+Math.random()+".xlsx";
     public static void main(String[] args) {
 
-        List<Employee> employees = new ArrayList<>();
+        List<Employee2> employees = new ArrayList<>();
         // 데이터 추가
-        employees.add(new Employee("7369", "SMITH", "CLERK", "7902", "1993-06-13", "800.00", "0.00", "20"));
-        employees.add(new Employee("7499", "ALLEN", "SALESMAN", "7698", "1998-08-15", "1600.00", "300.00", "30"));
-        employees.add(new Employee("7521", "WARD", "SALESMAN", "7698", "1996-03-26", "1250.00", "500.00", "30"));
-        employees.add(new Employee("7566", "JONES", "MANAGER", "7839", "1995-10-31", "2975.00", "", "20"));
-        employees.add(new Employee("7698", "BLAKE", "MANAGER", "7839", "1992-06-11", "2850.00", "", "30"));
-        employees.add(new Employee("7782", "CLARK", "MANAGER", "7839", "1993-05-14", "2450.00", "", "10"));
-        employees.add(new Employee("7788", "SCOTT", "ANALYST", "7566", "1996-03-05", "3000.00", "", "20"));
-        employees.add(new Employee("7839", "KING", "PRESIDENT", "", "1990-06-09", "5000.00", "0.00", "10"));
-        employees.add(new Employee("7844", "TURNER", "SALESMAN", "7698", "1995-06-04", "1500.00", "0.00", "30"));
-        employees.add(new Employee("7876", "ADAMS", "CLERK", "7788", "1999-06-04", "1100.00", "", "20"));
-        employees.add(new Employee("7900", "JAMES", "CLERK", "7698", "2000-06-23", "950.00", "", "30"));
-        employees.add(new Employee("7934", "MILLER", "CLERK", "7782", "2000-01-21", "1300.00", "", "10"));
-        employees.add(new Employee("7902", "FORD", "ANALYST", "7566", "1997-12-05", "3000.00", "", "20"));
-        employees.add(new Employee("7654", "MARTIN", "SALESMAN", "7698", "1998-12-05", "1250.00", "1400.00", "30"));
+        employees.add(new Employee2("7369", "SMITH", "CLERK", "7902", "1993-06-13", "800.00", "0.00", "20"));
+        employees.add(new Employee2("7499", "ALLEN", "SALESMAN", "7698", "1998-08-15", "1600.00", "300.00", "30"));
+        employees.add(new Employee2("7521", "WARD", "SALESMAN", "7698", "1996-03-26", "1250.00", "500.00", "30"));
+        employees.add(new Employee2("7566", "JONES", "MANAGER", "7839", "1995-10-31", "2975.00", "", "20"));
+        employees.add(new Employee2("7698", "BLAKE", "MANAGER", "7839", "1992-06-11", "2850.00", "", "30"));
+        employees.add(new Employee2("7782", "CLARK", "MANAGER", "7839", "1993-05-14", "2450.00", "", "10"));
+        employees.add(new Employee2("7788", "SCOTT", "ANALYST", "7566", "1996-03-05", "3000.00", "", "20"));
+        employees.add(new Employee2("7839", "KING", "PRESIDENT", "", "1990-06-09", "5000.00", "0.00", "10"));
+        employees.add(new Employee2("7844", "TURNER", "SALESMAN", "7698", "1995-06-04", "1500.00", "0.00", "30"));
+        employees.add(new Employee2("7876", "ADAMS", "CLERK", "7788", "1999-06-04", "1100.00", "", "20"));
+        employees.add(new Employee2("7900", "JAMES", "CLERK", "7698", "2000-06-23", "950.00", "", "30"));
+        employees.add(new Employee2("7934", "MILLER", "CLERK", "7782", "2000-01-21", "1300.00", "", "10"));
+        employees.add(new Employee2("7902", "FORD", "ANALYST", "7566", "1997-12-05", "3000.00", "", "20"));
+        employees.add(new Employee2("7654", "MARTIN", "SALESMAN", "7698", "1998-12-05", "1250.00", "1400.00", "30"));
 
         XSSFWorkbook workbook = new XSSFWorkbook();
         XSSFSheet sheet = workbook.createSheet("설문결과");
 
         for(int r=0; r<employees.size(); r++){
             XSSFRow row =sheet.createRow(r);
-            Employee emp = employees.get(r);
+            Employee2 emp = employees.get(r);
 
             Cell empno = row.createCell(0);
             Cell ename = row.createCell(1);
@@ -69,7 +69,7 @@ public class Poi {
     }
 }
 
-class Employee {
+class Employee2 {
     private String empno;
     private String ename;
     private String job;
@@ -79,7 +79,7 @@ class Employee {
     private String comm;
     private String deptno;
 
-    public Employee(String empno, String ename, String job, String mgr, String hiredate, String sal, String comm, String deptno) {
+    public Employee2(String empno, String ename, String job, String mgr, String hiredate, String sal, String comm, String deptno) {
         this.empno = empno;
         this.ename = ename;
         this.job = job;
@@ -125,7 +125,7 @@ class Employee {
 
     @Override
     public String toString() {
-        return "Employee{" +
+        return "Employee2{" +
                 "empno='" + empno + '\'' +
                 ", ename='" + ename + '\'' +
                 ", job='" + job + '\'' +
