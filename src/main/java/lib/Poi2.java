@@ -49,7 +49,6 @@ public class Poi2 {
         }
 
         int rowCnt = 0;
-        int checkrow = 0;
         XSSFRow row = null;
         for(int r=0; r<employees.size(); r++){
             row =sheet.createRow(rowCnt+1);
@@ -75,7 +74,7 @@ public class Poi2 {
             String[] jobArray = jobIsArray.split(",");
             int len = jobArray.length;
 
-            if(jobIsArray.contains(",") && len >1){
+            if(len >1 && jobIsArray.contains(",")){
 
                 for(int cc=0; cc<header.length; cc++){
                     int max=0;
