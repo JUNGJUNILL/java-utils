@@ -17,7 +17,7 @@ class Child001 extends Parent001 {
         super.display();
     }
 }
-public class P003_2000_04_exam {
+public class P003_2020_04_exam {
 
     public static void main(String[] args) {
         Child001 obj = new Child001(10);

@@ -1,6 +1,6 @@
 package helloJava.personal.P003_EIPTest;
 
-public class P003_2000_08_exam {
+public class P003_2020_08_exam {
 
     //다음은 n이 10일 때 10을 이진수로 반환하는 자바소스코드이다
     //?에 들어갈 값을 적으시오

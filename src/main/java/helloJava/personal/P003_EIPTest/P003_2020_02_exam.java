@@ -1,6 +1,6 @@
 package helloJava.personal.P003_EIPTest;
 
-public class P003_2000_02_exam {
+public class P003_2020_02_exam {
 
     public static void main(String[] args) {
         int i=3;

@@ -21,7 +21,7 @@ class Child002 extends Parent002 {
         return "Car name : "+ val;
     }
 }
-public class P003_2000_06_exam {
+public class P003_2020_06_exam {
 
     public static void main(String[] args) {
 

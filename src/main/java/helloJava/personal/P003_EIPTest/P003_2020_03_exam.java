@@ -12,7 +12,7 @@ class Child000 extends Parent000 {
         System.out.println("Child");
     }
 }
-public class P003_2000_03_exam {
+public class P003_2020_03_exam {
     public static void main(String[] args) {
         Parent000 pa = new Child000();
         pa.show();
