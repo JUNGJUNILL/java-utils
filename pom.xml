@@ -6,6 +6,12 @@
 	<name>java-utils</name>
 	<description>자바유틸</description>
 
+	<properties>
+		<!-- Maven에서 사용할 Java 버전 설정 -->
+		<maven.compiler.source>11</maven.compiler.source>
+		<maven.compiler.target>11</maven.compiler.target>
+	</properties>
+
 	<dependencies>
 		<!--/java-utils/src/main/java/lib/Json.java -->
 		<dependency>
