@@ -32,8 +32,50 @@ public class P003_2023_03_exam_Hard {
     public static void main(String[] args) {
 
         Child007 obj = new Child007();
-        System.out.println(obj.getX()); //500
+        System.out.println(obj.getX());
 
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//500

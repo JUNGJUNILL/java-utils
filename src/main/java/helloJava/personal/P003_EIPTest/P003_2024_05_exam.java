@@ -1,11 +1,11 @@
 package helloJava.personal.P003_EIPTest;
 
 
-interface exInterFace {
+interface ExInterFace {
     int sum(int[] a, boolean odd);
 }
 
-class exInterFaceImpl implements exInterFace {
+class ExInterFaceImpl implements ExInterFace {
 
     public  int sum(int[] a, boolean odd){
         int result = 0 ;
@@ -24,7 +24,7 @@ public class P003_2024_05_exam {
     public static void main(String[] args) {
 
         int a[]={1,2,3,4,5,6,7,8,9};
-        exInterFaceImpl x = new exInterFaceImpl();
+        ExInterFaceImpl x = new ExInterFaceImpl();
         System.out.println(x.sum(a,true) + ", " + x.sum(a,false));
     }
 

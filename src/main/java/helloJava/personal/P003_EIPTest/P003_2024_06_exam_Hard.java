@@ -1,6 +1,6 @@
 package helloJava.personal.P003_EIPTest;
 
-public class P003_2024_06_exam {
+public class P003_2024_06_exam_Hard {
 
     public static String fn(String str, int index, boolean[] seen){
         if(index < 0) return "";
