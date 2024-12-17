@@ -35,4 +35,4 @@ replay_pid
 
 bin/
 
-target/
+target/classes
