@@ -2,7 +2,7 @@ package helloJava.personal.P002_javaUtil;
 
 //멀티 스레스 환경에서 동시성 제어 할 때 씀
 public class P005_JavaUtil {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 		Counter counter = new Counter();
 
 		// 두 개의 스레드를 생성
@@ -13,7 +13,7 @@ public class P005_JavaUtil {
 		// 스레드 시작
 		thread1.start();
 		thread2.start();
-//		thread3.start();
+		thread3.start();
 
     }
 
@@ -32,7 +32,7 @@ class CounterThread extends Thread {
 			counter.increment();
 			try {
 				Thread.sleep(1000); // 0.1초 대기
-			} catch (InterruptedException e) {
+			} catch (Exception e) {
 				e.printStackTrace();
 			}
 		}
@@ -43,7 +43,7 @@ class CounterThread extends Thread {
 			counter.increment2();
 			try {
 				Thread.sleep(1000); // 0.1초 대기
-			} catch (InterruptedException e) {
+			} catch (Exception e) {
 				e.printStackTrace();
 			}
 		}
@@ -54,7 +54,7 @@ class CounterThread extends Thread {
 			counter.increment3();
 			try {
 				Thread.sleep(1000); // 0.1초 대기
-			} catch (InterruptedException e) {
+			} catch (Exception e) {
 				e.printStackTrace();
 			}
 		}
