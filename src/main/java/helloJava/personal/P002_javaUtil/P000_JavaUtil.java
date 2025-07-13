@@ -2,15 +2,23 @@ package helloJava.personal.P002_javaUtil;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import lombok.Data;
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.sql.Date;
 import java.text.NumberFormat;
+import java.text.SimpleDateFormat;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
 
@@ -165,15 +173,128 @@ public class P000_JavaUtil {
         return retVal; 
     }
     
-    
+    public static void func8(){
+        String str = "010-9839-8544|010-9053-7084";
+        String abc = "정-준-일";
+        String[] arr = str.split("\\|"); 
+        String[] arr2 = abc.split("\\-"); 
+
+        for(String hello : arr2){
+            System.out.println(hello);
+        }
+    }
+
+    public static void func9(){
+
+        Map<String,Object> map = new HashMap<>(); 
+        if( map.get("hello") == null){
+            map.put("hello", "world"); 
+        }
+
+        System.out.println(map.get("hello").toString());
+
+    }
+
+    public static void func010(){
+        Map<String,Object> map1 =new HashMap<>(); 
+        Map<String,Object> map2 =new HashMap<>(); 
+        map2.put("1", "hello"); 
+        map2.put("1", "world"); 
+        map1.put("1", map2); 
+
+        Map<String,Object> dd = (Map) map1.get("1"); 
+        System.out.println(dd.get("1").toString());
+    }
+
+    public static void func011(){
+
+
+    String[] arr = new String[5];
+
+    arr[0] = "1";
+    arr[1] = "1";
+    arr[2] = "1";
+    arr[3] = "2";
+    arr[4] = "2";
+
+    Set<String> processedGroups = new HashSet<>();
+
+    for (String value : arr) {
+        if (!processedGroups.contains(value)) {
+            System.out.println("Processing group " + value);
+            processedGroups.add(value);
+        }
+    }
+}
+
+
+    public static void func012(){
+        
+        @Data
+        class Test{
+             private String nm; 
+             private String id;
+             private int age; 
+             private String flag; 
+        }
+
+        Test vo1 = new Test(); 
+        vo1.setNm("정준일"); 
+        vo1.setFlag("F"); 
+
+        Test vo2 = new Test(); 
+        vo2.setNm("정준일"); 
+        vo2.setFlag("O"); 
+
+        Test vo3 = new Test(); 
+        vo3.setNm("정준일"); 
+        vo3.setFlag("O"); 
+
+        List<Test> result = new ArrayList<>();
+        result.add(vo1);
+        result.add(vo2);
+        result.add(vo3);
+
+        Iterator<Test> iterator = result.iterator();
+        while (iterator.hasNext()) {
+            Test vo = iterator.next();
+            if (vo.getNm().equals("정준일") && vo.getFlag().equals("O")) {
+                iterator.remove(); // 안전한 제거 방법
+            }
+        }
+
+        for(Test vo : result){
+            System.out.println("오잉? - > "+vo.getFlag());
+        }
+    }
     
 
-    public static void main(String[] args) {
+    static void func013() {
+
+        Map<String, Object> item = new HashMap<>();
+        Map<String, String> data = new HashMap<>();
+        
+        String userNm = (String) item.get("USER_NM");
+        
+        // NULL 체크 후 빈 문자열 반환
+        
+
+    
+
+    }
+
+
+    
+
+    public static void main(String[] args) throws Exception {
         // func0(); 
         // func1();
         // func2();
-        func7();
         // func4();
+        // func012();
+
+        func013();
+
 
     }
 
