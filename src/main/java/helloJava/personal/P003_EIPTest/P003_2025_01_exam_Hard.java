@@ -4,11 +4,7 @@ public class P003_2025_01_exam_Hard {
 
 
     public static void main(String[] args) {
-        int a = 6;
-        int b = 10; 
-         a+= b++;
-         System.out.println("a="+a);
-        new Child01(); 
+       new Child01(); 
        System.out.println(Parent01.total);
     }
 }
@@ -22,14 +18,13 @@ class Parent01 {
     static int total = 0; 
     int v =1; 
     public Parent01(){
-        System.out.println("parent");
         total += (++v); 
         show(); 
     }
 
     public void show(){
+        System.out.println("parent show()");
         total += total;
-        System.out.println("parent show="+total);
  
     }
 
@@ -39,14 +34,13 @@ class Child01 extends Parent01 {
     int v =10;
 
     public Child01(){
-        System.out.println(total +" child");
         total += v++; 
         show(); 
     }
 
     @Override
     public void show(){
-        System.out.println(total+"child show"+total);
+        System.out.println("child show()");
         total += total*2; 
     }
 }

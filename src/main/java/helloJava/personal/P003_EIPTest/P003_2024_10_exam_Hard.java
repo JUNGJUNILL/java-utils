@@ -23,6 +23,10 @@ public class P003_2024_10_exam_Hard {
       void print(Number a){
         System.out.print("C" + a);
       }
+      void print(Long a){
+        System.out.print("D" + a);
+
+      }
    }
  }
  

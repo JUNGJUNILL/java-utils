@@ -1,18 +1,21 @@
 package helloJava.personal.P003_EIPTest;
 
-public class P001 {
+public class P001_1 {
 
     public static void main(String[] args) {
-        int total = 1;
-        int v =1;
-        total += (v++);
-        System.out.println(total);
+     
+        A a = new B();
+        System.out.println(a.a);
+        System.out.println(a.getValue());
         
     }
 }
 
 class A {
-
+    public int a=10;
+    public int getValue(){
+        return this.a;
+    }
     public A(){
         System.out.println("A 생성자");
         show();
@@ -26,6 +29,12 @@ class A {
 }
 
 class B  extends A {
+    public int a=20;
+
+    @Override
+    public int getValue(){
+        return this.a;
+    }
     public B(){
         System.out.println("B 생성자");
         show();

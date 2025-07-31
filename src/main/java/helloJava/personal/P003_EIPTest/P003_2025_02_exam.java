@@ -1,6 +1,10 @@
 package helloJava.personal.P003_EIPTest;
 
 public class P003_2025_02_exam{
+    public static void main(String[] args) {
+        
+        System.out.println(calc("5"));
+    }
 
     static int calc(int v){
         if(v <=1) return v; 
@@ -13,8 +17,4 @@ public class P003_2025_02_exam{
         return calc(value -1) + calc(value - 3);
     }
 
-    public static void main(String[] args) {
-        
-        System.out.println(calc("5"));
-    }
 }
