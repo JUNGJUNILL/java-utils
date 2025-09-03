@@ -3,6 +3,8 @@
 import java.io.*;
 import java.net.*;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Hello{
 	
@@ -32,6 +34,11 @@ public class Hello{
 
     
     */
+
+    List<String> results = new ArrayList<>(); 
+  System.out.println(results.isEmpty() == true);
+  System.out.println(results.size());
+  
 }
 
 }	

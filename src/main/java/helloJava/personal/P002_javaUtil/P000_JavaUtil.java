@@ -283,6 +283,15 @@ public class P000_JavaUtil {
 
     }
 
+    static void func014(){
+        String str = null; 
+        if(str != null){
+            System.out.println("not null");
+        }else{
+            System.out.println("null");
+        }
+    }
+
 
     
 
@@ -293,7 +302,7 @@ public class P000_JavaUtil {
         // func4();
         // func012();
 
-        func013();
+        func014();
 
 
     }
