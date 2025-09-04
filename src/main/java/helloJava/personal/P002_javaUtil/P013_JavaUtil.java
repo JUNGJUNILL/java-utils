@@ -85,11 +85,11 @@ public class P013_JavaUtil {
         }
     
         public static void main(String[] args) {
-            System.out.println(fn_getDateOfBirth("801211","1092835")); // 19801211
+            System.out.println(fn_getDateOfBirth("801233","1111111")); // 19801211
             System.out.println(fn_getDateOfBirth("901207","1785415")); // 19801211
-            System.out.println(fn_getDateOfBirth("021207","3785415")); 
+            System.out.println(fn_getDateOfBirth("991207","3785415")); 
             System.out.println(getBirthday("900611-1124921")); // 19900611
-            System.out.println(getBirthday("001207-3123527")); // 20210302
+            System.out.println(getBirthday("201232-3123527")); // 20210302
 
             String str = "19901207"; 
             System.out.println(str.length());
