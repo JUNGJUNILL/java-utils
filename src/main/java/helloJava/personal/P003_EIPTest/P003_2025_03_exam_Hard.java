@@ -1,6 +1,6 @@
 package helloJava.personal.P003_EIPTest;
 
-public class P003_2025_02_exam{
+public class P003_2025_03_exam_Hard{
     public static void main(String[] args) {
         
         System.out.println(calc("5"));

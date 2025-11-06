@@ -19,13 +19,27 @@ import helloJava.personal.P002_javaUtil.P018.Lamda001;
 
 
 public class P018_JavaUtil {
-    public static void main(String[] args) {
 
+    static void testFunc(Lamda000 l) throws Exception {
+        int value = l.calculate(1,2);
+        System.out.println("value="+value);
+
+    }
+    public static void main(String[] args) throws Exception {
+
+        // - Lambda Expression
+        /************************************************ */
         Lamda000 add = (a,b)-> a+b;
+        testFunc((a,b)-> (a+b)*2); //이런식으로도 되는구나..
+        add.printHelloWolrd();
+        Lamda000.staticMethod(); 
         int a = add.calculate(1,2); 
         System.out.println(a);
+        /************************************************ */
 
 
+        // - Stream API
+        /************************************************ */
         List<String> list = Arrays.asList("a", "b", "c");
         Stream<String> stream = list.stream();
         stream.filter(param -> param.startsWith("a"))

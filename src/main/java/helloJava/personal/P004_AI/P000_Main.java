@@ -15,7 +15,7 @@ public class P000_Main {
         GenerateContentResponse response =
             client.models.generateContent(
                 "gemini-2.5-flash",
-                "그냥 사과를 먹고 있는 원숭이 사진을 얻고 싶어",
+                " 단계적으로 생각해, 할루시네이션없이,",
 
                 null);
 
